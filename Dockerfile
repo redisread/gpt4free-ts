@@ -18,8 +18,6 @@ RUN cp ./node_modules /usr/src/app/ -r
 RUN rm /usr/src/build -rf
 WORKDIR /usr/src/app
 
-VOLUME [ "/usr/src/app/run" ]
-
 EXPOSE 3000
 
 CMD ["node", "index.js"]

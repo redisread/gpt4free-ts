@@ -11,7 +11,7 @@ services:
       - "13000:3000"
     restart: always
     volumes:
-      - ./run:/usr/src/app/run
+      - ./run:`picture-disk`
     cap_add:
       - "SYS_ADMIN"
     environment:
