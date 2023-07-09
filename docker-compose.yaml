@@ -9,9 +9,7 @@ services:
     image: gpt4free-ts:latest
     ports:
       - "13000:3000"
-    restart: always
-    volumes:
-      - ./run:/usr/src/app/run
+    restart: always 
     cap_add:
       - "SYS_ADMIN"
     environment:
@@ -19,3 +17,4 @@ services:
       - http_proxy=${http_proxy}
       - https_proxy=${http_proxy}
       - rapid_api_key=${rapid_api_key}
+    working_dir: /app
